@@ -2,12 +2,12 @@
 
     class Database {
 
-        private $driver = "mysql";
-        private $host = "localhost";
-        private $user = "igor.djurdjic";
-        private $pass = "11111111";
-        private $char = "utf8mb4";
-        private $dbname = "phpsample";
+        private $driver = DB_DRIVER;
+        private $host =   DB_HOST;
+        private $user =   DB_USER;
+        private $pass =   DB_PASS;
+        private $char =   DB_CHAR;
+        private $dbname = DB_NAME;
 
         private $pdo;
         private $stmt;
