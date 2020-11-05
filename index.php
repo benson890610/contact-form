@@ -1,3 +1,8 @@
+<?php 
+    session_start();
+    require "helpers/sessionHelper.php"; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,18 +32,18 @@
                             <form action="proccess.php" method="post">
                                 <div class="form-group">
                                     <label for="email">Your email address</label>
-                                    <input type="text" name="email" id="email" class="form-control">
-                                    <span class="invalid-feedback"></span>
+                                    <input type="text" name="email" id="email" class="form-control <?php echo checkSession('email'); ?>">
+                                    <span class="invalid-feedback"><?php echo sessionMessage('email'); ?></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="subject">Subject</label>
-                                    <input type="text" name="subject" id="subject" class="form-control">
-                                    <span class="invalid-feedback"></span>
+                                    <input type="text" name="subject" id="subject" class="form-control <?php echo checkSession('subject'); ?>">
+                                    <span class="invalid-feedback"><?php echo sessionMessage('subject'); ?></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Message</label>
-                                    <textarea name="message" id="summary-ckeditor" rows="10" class="form-control"></textarea>
-                                    <span class="invalid-feedback"></span>
+                                    <textarea name="message" id="summary-ckeditor" rows="10" class="form-control <?php echo checkSession('message'); ?>"></textarea>
+                                    <span class="invalid-feedback"><?php echo sessionMessage('message'); ?></span>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary btn-block">Send</button>
@@ -58,3 +63,5 @@
     <script>CKEDITOR.replace( 'summary-ckeditor' );</script>
 </body>
 </html>
+
+<?php clearContactSessions(); ?>
