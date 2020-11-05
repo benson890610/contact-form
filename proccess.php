@@ -5,7 +5,7 @@
     if($_SERVER["REQUEST_METHOD"] === "POST") {
 
         session_start();
-
+        
         require_once "helpers/sessionHelper.php";
         require_once "library/classInterfaces/classInterfaces.php";
 
