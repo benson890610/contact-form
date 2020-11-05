@@ -22,6 +22,8 @@
         <p class="lead text-muted text-center">Complete the form below and send message to the app host.</p>
     </header>
 
+    <div class="container"><?php echo output_message(); ?></div>
+
     <main>
         <div class="container">
             <div class="row mt-5">
