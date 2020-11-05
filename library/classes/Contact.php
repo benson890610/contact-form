@@ -18,7 +18,7 @@
             $this->repository = $repository;
         }
         public function save() {
-            //$this->repository->save($this->email,$this->subject,$this->message);
+            $this->repository->save($this->email,$this->subject,$this->message);
         }
         public function send() {
             $mail = new PHPMailer;
