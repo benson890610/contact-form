@@ -1,7 +1,5 @@
 <?php
 
-    require "library/classInterfaces/classInterfaces.php";
-
     class Request implements EmailInterface, SubjectInterface, MessageInterface {
 
         private $email;

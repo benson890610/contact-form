@@ -6,7 +6,7 @@
 
         const MIN_CHAR_LEN = 5;
 
-        public function contactRequest(Request $request) {
+        public function contact(Request $request) {
             $this->validEmail($request->getEmail());
             $this->validSubject($request->getSubject());
             $this->validMessage($request->getMessage());

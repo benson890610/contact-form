@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    require "helpers/sessionHelper.php"; 
+    require "helpers/sessionHelper.php";
 ?>
 
 <!DOCTYPE html>

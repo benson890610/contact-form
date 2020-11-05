@@ -6,7 +6,8 @@
 
         session_start();
 
-        require "helpers/sessionHelper.php";
+        require_once "helpers/sessionHelper.php";
+        require_once "library/classInterfaces/classInterfaces.php";
 
         spl_autoload_register(function($className){
             if(file_exists("library/classes/" . $className . ".php")) {
