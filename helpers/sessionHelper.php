@@ -1,5 +1,23 @@
 <?php
 
+    function session($type, $message) {
+        $_SESSION[$type] = $message;
+    }
+
+    function output_message() {
+        if(isset($_SESSION['success'])) {
+            $message = "<div class=\"alert alert-success mt-4\">". $_SESSION['success'] ."</div>";
+            unset($_SESSION['success']);
+            return $message;
+        }
+        if(isset($_SESSION['error'])) {
+            $message = "<div class=\"alert alert-danger mt-4\">". $_SESSION['error'] ."</div>";
+            unset($_SESSION['error']);
+            return $message;
+        }
+    }
+
+
     function setSessionError($type, $message) {
         $_SESSION[$type] = $message;
     }
