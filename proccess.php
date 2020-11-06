@@ -1,7 +1,5 @@
 <?php
 
-    ini_set('display_errors', 'on');
-
     if($_SERVER["REQUEST_METHOD"] === "POST") {
 
         session_start();
